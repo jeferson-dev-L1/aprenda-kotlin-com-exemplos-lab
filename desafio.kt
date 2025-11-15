@@ -48,9 +48,9 @@ fun main() {
         conteudos = listOf(kotlinIntro, kotlinOO, coroutines)
     )
     
-    val aluno1 = Usuario("Jeferson", "jeferson@senai")
-    val aluno2 = Usuario("Marcos", "marcos@senai")
-    val aluno3 = Usuario("Daniela", "daniela@senai")
+    val aluno1 = Usuario("Jeferson", "jeferson@senai.me")
+    val aluno2 = Usuario("Marcos", "marcos@senai.me")
+    val aluno3 = Usuario("Daniela", "daniela@senai.me")
     
     println("Teste de matricula em: ${formacaoBackend.nome}")
     
@@ -58,7 +58,7 @@ fun main() {
     formacaoBackend.matricular(aluno2)
     formacaoBackend.matricular(aluno1) // Aluno já matriculado
     
-    val outrosAlunos = listOf(aluno3, Usuario("Raquel", "raquel@senai")).toTypedArray()
+    val outrosAlunos = listOf(aluno3, Usuario("Raquel", "raquel@senai.me")).toTypedArray()
     formacaoBackend.matricularVarios(*outrosAlunos)
     
     println("\n Resumo da Formação")
