@@ -1,6 +1,6 @@
 // [Template no Kotlin Playground](https://pl.kotl.in/WcteahpyN)
 
-num class Nivel { BASICO, INTERMEDIARIO, AVANCADO }
+enum class Nivel { BASICO, INTERMEDIARIO, AVANCADO }
 
 data class Usuario (var nome: String, val email: String)
 
@@ -48,20 +48,20 @@ fun main() {
         conteudos = listOf(kotlinIntro, kotlinOO, coroutines)
     )
     
-    val aluno1 = Usuario("Jeferson", "jeferson@dio.me")
-    val aluno2 = Usuario("Marcos", "marcos@dio.me")
-    val aluno3 = Usuario("Daniela", "daniela@dio.me")
+    val aluno1 = Usuario("Jeferson", "jeferson@senai")
+    val aluno2 = Usuario("Marcos", "marcos@senai")
+    val aluno3 = Usuario("Daniela", "daniela@senai")
     
-    println("---Teste de matricula em: ${formacaoBackend.nome}---")
+    println("Teste de matricula em: ${formacaoBackend.nome}")
     
     formacaoBackend.matricular(aluno1)
     formacaoBackend.matricular(aluno2)
     formacaoBackend.matricular(aluno1) // Aluno já matriculado
     
-    val outrosAlunos = listOf(aluno3, Usuario("Raquel", "raquel@dio.me")).toTypedArray()
+    val outrosAlunos = listOf(aluno3, Usuario("Raquel", "raquel@senai")).toTypedArray()
     formacaoBackend.matricularVarios(*outrosAlunos)
     
-    println("\n--- Resumo da Formação ---")
+    println("\n Resumo da Formação")
     println("Formação: ${formacaoBackend.nome} (${formacaoBackend.nivel})")
     println("Duração Estimada: ${formacaoBackend.duracaoTotal} minutos")
     println("Total de Módulos: ${formacaoBackend.conteudos.size}") 
